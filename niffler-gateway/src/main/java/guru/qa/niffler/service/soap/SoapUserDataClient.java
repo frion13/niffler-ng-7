@@ -1,22 +1,11 @@
 package guru.qa.niffler.service.soap;
 
+import guru.qa.jaxb.userdata.*;
 import guru.qa.niffler.ex.NoSoapResponseException;
 import guru.qa.niffler.model.UserJson;
 import guru.qa.niffler.service.UserDataClient;
 import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
-import jaxb.userdata.AcceptInvitationRequest;
-import jaxb.userdata.AllUsersPageRequest;
-import jaxb.userdata.AllUsersRequest;
-import jaxb.userdata.CurrentUserRequest;
-import jaxb.userdata.DeclineInvitationRequest;
-import jaxb.userdata.FriendsPageRequest;
-import jaxb.userdata.FriendsRequest;
-import jaxb.userdata.RemoveFriendRequest;
-import jaxb.userdata.SendInvitationRequest;
-import jaxb.userdata.UpdateUserRequest;
-import jaxb.userdata.UserResponse;
-import jaxb.userdata.UsersResponse;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
