@@ -79,4 +79,10 @@ public class LocalConfig implements Config {
     public String screenshotBaseDir() {
         return "screenshots/local/";
     }
+
+    @Nonnull
+    @Override
+    public String allureDockerServiceUrl() {
+        return "http://allure:5050/";
+    }
 }

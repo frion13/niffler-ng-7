@@ -79,4 +79,12 @@ public class DockerConfig implements Config {
     public String screenshotBaseDir() {
         return "screenshots/selenoid/";
     }
+
+    @Nonnull
+    @Override
+    public String allureDockerServiceUrl() {
+        final String allureDockerApiUrl = System.getenv("ALLURE_DOCKER_API");
+        return allureDockerApiUrl != null ? allureDockerApiUrl
+                : "http://allure:5050/";
+    }
 }

@@ -56,4 +56,7 @@ public interface Config {
 
   @Nonnull
   String screenshotBaseDir();
+
+  @Nonnull
+  String allureDockerServiceUrl();
 }
