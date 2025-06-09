@@ -16,7 +16,6 @@ import java.util.UUID;
 import static org.springframework.http.MediaType.APPLICATION_JSON;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.patch;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -45,8 +44,7 @@ class CategoriesControllerTest {
         .andExpect(jsonPath("$[0].archived").value(false))
         .andExpect(jsonPath("$[1].username").value(fixtureUser))
         .andExpect(jsonPath("$[1].name").value("Магазины"))
-        .andExpect(jsonPath("$[1].archived").value(true))
-            .andDo(print());
+        .andExpect(jsonPath("$[1].archived").value(true));
   }
 
   @Test
