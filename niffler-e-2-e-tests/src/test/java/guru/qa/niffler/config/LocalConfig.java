@@ -76,6 +76,12 @@ public class LocalConfig implements Config {
 
     @Nonnull
     @Override
+    public String kafkaAddress() {
+        return "127.0.0.1:9092";
+    }
+
+    @Nonnull
+    @Override
     public String screenshotBaseDir() {
         return "screenshots/local/";
     }
