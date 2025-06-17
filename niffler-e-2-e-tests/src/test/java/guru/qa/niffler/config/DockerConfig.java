@@ -70,6 +70,12 @@ public class DockerConfig implements Config {
 
     @Nonnull
     @Override
+    public String kafkaAddress() {
+        return "kafka:9092";
+    }
+
+    @Nonnull
+    @Override
     public String userdataGrpcAddress() {
         return "userdata.niffler.dc";
     }
